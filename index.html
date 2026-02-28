@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linda Bonginkosi Mkhatshwa | Cybersecurity & Data Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0f0f1a;
+            color: #ffffff;
+        }
+
+        header {
+            background: linear-gradient(90deg, #00f0ff, #0077ff);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #00f0ff;
+            border-bottom: 2px solid #00f0ff;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background-color: #1a1a2e;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+
+        a {
+            color: #00f0ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 14px;
+            background: #00f0ff;
+            color: #000;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Linda Bonginkosi Mkhatshwa</h1>
+    <p>IT & Cybersecurity Professional | Data Analytics | Network Security</p>
+</header>
+
+<section class="section">
+    <h2>Professional Summary</h2>
+    <div class="card">
+        <p>
+            IT and Cybersecurity professional with leadership experience managing operations 
+            at Ndwandwe Group Pty Ltd since 2017. Skilled in cybersecurity fundamentals, 
+            networking, incident response, and data analytics. 
+            Passionate about securing systems, analyzing operational data, 
+            and improving network performance.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Cybersecurity Fundamentals</li>
+            <li>Network Defense & Threat Management</li>
+            <li>Endpoint Security</li>
+            <li>Networking Devices & Configuration</li>
+            <li>Python (Pandas, Matplotlib, Seaborn)</li>
+            <li>Data Analysis & Visualization</li>
+            <li>Incident Response Lifecycle</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Professional Experience</h2>
+    <div class="card">
+        <strong>Managing Director — Ndwandwe Group Pty Ltd (2017–Present)</strong>
+        <ul>
+            <li>Managed logistics and diesel supply operations</li>
+            <li>Oversaw business operations and team coordination</li>
+            <li>Improved operational efficiency through data monitoring</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Technical Projects (GitHub)</h2>
+
+    <div class="card">
+        <strong>1. Network Security Risk Assessment</strong>
+        <p>Simulated a small-business network risk assessment identifying vulnerabilities and mitigation strategies.</p>
+        <ul>
+            <li>Threat modeling</li>
+            <li>Risk scoring methodology</li>
+            <li>Security control recommendations</li>
+        </ul>
+        <p>
+            <a class="button" href="https://github.com/ndwandwegroup-bit/network-risk-assessment" target="_blank">
+                View on GitHub
+            </a>
+        </p>
+    </div>
+
+    <div class="card">
+        <strong>2. SOC Incident Response Simulation</strong>
+        <p>Created an incident response workflow documenting detection, containment, and recovery procedures.</p>
+        <ul>
+            <li>Log analysis concepts</li>
+            <li>Incident response lifecycle</li>
+            <li>Security documentation</li>
+        </ul>
+        <p>
+            <a class="button" href="https://github.com/ndwandwegroup-bit/soc-incident-simulation" target="_blank">
+                View on GitHub
+            </a>
+        </p>
+    </div>
+
+    <div class="card">
+        <strong>3. Logistics Data Analysis Project (Python)</strong>
+        <p>Analyzed logistics performance data to identify trends, optimize delivery performance, and improve efficiency.</p>
+        <ul>
+            <li>Data cleaning</li>
+            <li>Exploratory data analysis</li>
+            <li>Visualization using Matplotlib & Seaborn</li>
+        </ul>
+        <p>
+            <a class="button" href="https://github.com/ndwandwegroup-bit/logistics-data-analysis" target="_blank">
+                View on GitHub
+            </a>
+        </p>
+
+        <canvas id="analyticsChart" height="200"></canvas>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: your-email@example.com</p>
+        <p>
+            GitHub: 
+            <a href="https://github.com/ndwandwegroup-bit" target="_blank">
+                github.com/ndwandwegroup-bit
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Linda Bonginkosi Mkhatshwa | Cybersecurity & Data Portfolio
+</footer>
+
+<script>
+    const ctx = document.getElementById('analyticsChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Vehicle 1', 'Vehicle 2', 'Vehicle 3'],
+            datasets: [{
+                label: 'Average Delivery Time (minutes)',
+                data: [34, 41, 52],
+                backgroundColor: ['#00f0ff', '#0077ff', '#00ffaa']
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { labels: { color: 'white' } }
+            },
+            scales: {
+                x: { ticks: { color: 'white' } },
+                y: { ticks: { color: 'white' } }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
